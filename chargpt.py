@@ -10,6 +10,7 @@ from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
 
 from mingpt.model import GPT
+from mingpt.bpe import BPETokenizer
 from mingpt.trainer import Trainer
 from mingpt.utils import set_seed, setup_logging, CfgNode as CN
 
@@ -47,7 +48,7 @@ class CharDataset(Dataset):
     @staticmethod
     def get_default_config():
         C = CN()
-        C.block_size = 256
+        C.block_size = 128
         return C
 
     def __init__(self, config, data):
