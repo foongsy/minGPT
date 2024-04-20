@@ -1,0 +1,7 @@
+hanziconv
+ipykernel
+ipywidgets
+matplotlib
+pip-chill
+torchvision
+transformers
